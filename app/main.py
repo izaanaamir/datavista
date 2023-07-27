@@ -1,7 +1,9 @@
 import uvicorn
+from core.router.data_fetchers import space_exploration
 from fastapi import FastAPI
 
 app = FastAPI()
+app.include_router(space_exploration.router)
 
 
 @app.get("/")
@@ -10,4 +12,4 @@ async def root():
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", reload=True)
