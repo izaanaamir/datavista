@@ -34,7 +34,7 @@ node_modules/
 venv/
 env/
 __pycache__/
-*.env
+.env
 
 # Build output
 dist/
